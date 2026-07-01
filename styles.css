@@ -7,13 +7,20 @@
 
 :root {
   /* Color Palette */
-  --bg-primary: #fcfbf7;      /* Warm Ivory */
-  --bg-secondary: #f6f2e8;    /* Muted Cream */
-  --gold-primary: #d4af37;    /* Metallic Gold */
-  --gold-dark: #b38f24;       /* Accent Deep Gold */
-  --gold-light: #f3ebd0;      /* Light Gold Shadow */
-  --text-main: #2b2b2a;       /* Deep Charcoal */
-  --text-muted: #6b6b66;      /* Slate Muted Gray */
+  --bg-primary: #fcfbf7;
+  /* Warm Ivory */
+  --bg-secondary: #f6f2e8;
+  /* Muted Cream */
+  --gold-primary: #d4af37;
+  /* Metallic Gold */
+  --gold-dark: #b38f24;
+  /* Accent Deep Gold */
+  --gold-light: #f3ebd0;
+  /* Light Gold Shadow */
+  --text-main: #2b2b2a;
+  /* Deep Charcoal */
+  --text-muted: #6b6b66;
+  /* Slate Muted Gray */
   --white: #ffffff;
   --black-alpha: rgba(0, 0, 0, 0.05);
 
@@ -49,26 +56,33 @@ body {
 }
 
 body.locked {
-  overflow: hidden; /* Lock scroll until invitation is opened */
+  overflow: hidden;
+  /* Lock scroll until invitation is opened */
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-primary);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--gold-primary);
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--gold-dark);
 }
 
 /* Typography Utility Classes */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-serif);
   font-weight: 400;
   letter-spacing: 2px;
@@ -101,7 +115,8 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
-.divider::before, .divider::after {
+.divider::before,
+.divider::after {
   content: '';
   height: 1px;
   width: 80px;
@@ -118,7 +133,8 @@ h1, h2, h3, h4 {
   margin-left: 15px;
 }
 
-.divider i, .divider span {
+#helo .divider i,
+.divider span {
   color: var(--gold-primary);
   font-size: 1.2rem;
   animation: pulse-slow 3s infinite ease-in-out;
@@ -126,24 +142,56 @@ h1, h2, h3, h4 {
 
 /* Animations */
 @keyframes pulse-slow {
-  0%, 100% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.15); opacity: 1; }
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
 }
 
 @keyframes float-slow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 @keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes scratch-guide {
-  0% { transform: translate(-50%, -50%) translateX(-20px); opacity: 0.3; }
-  50% { transform: translate(-50%, -50%) translateX(20px); opacity: 1; }
-  100% { transform: translate(-50%, -50%) translateX(-20px); opacity: 0.3; }
+  0% {
+    transform: translate(-50%, -50%) translateX(-20px);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) translateX(20px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translateX(-20px);
+    opacity: 0.3;
+  }
 }
 
 /* Container Structure */
@@ -219,10 +267,28 @@ section:nth-of-type(even) {
   opacity: 0.85;
 }
 
-.ornament-top-left { top: 10px; left: 10px; }
-.ornament-top-right { top: 10px; right: 10px; transform: scaleX(-1); }
-.ornament-bottom-left { bottom: 10px; left: 10px; transform: scaleY(-1); }
-.ornament-bottom-right { bottom: 10px; right: 10px; transform: scale(-1); }
+.ornament-top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.ornament-top-right {
+  top: 10px;
+  right: 10px;
+  transform: scaleX(-1);
+}
+
+.ornament-bottom-left {
+  bottom: 10px;
+  left: 10px;
+  transform: scaleY(-1);
+}
+
+.ornament-bottom-right {
+  bottom: 10px;
+  right: 10px;
+  transform: scale(-1);
+}
 
 .monogram {
   font-family: var(--font-serif);
@@ -446,7 +512,8 @@ section:nth-of-type(even) {
   height: 100%;
   z-index: 2;
   cursor: crosshair;
-  touch-action: none; /* Prevent scrolling on touch screens while scratching */
+  touch-action: none;
+  /* Prevent scrolling on touch screens while scratching */
   transition: opacity 0.8s ease-out;
 }
 
@@ -1116,7 +1183,7 @@ footer {
     box-shadow: none;
     padding: 2rem 1rem;
   }
-  
+
   .ornament-corner {
     width: 45px;
     height: 45px;
@@ -1193,7 +1260,7 @@ footer {
   .hero-names {
     font-size: 3.2rem;
   }
-  
+
   .scratch-container {
     height: 480px;
   }
